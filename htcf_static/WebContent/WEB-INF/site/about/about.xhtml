@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:tag="http://java.sun.com/jsf/composite/facetag">
+	
+	<ui:composition template="../tempalet/templaet_business.xhtml">
+    <ui:param name="menu_nav_key" value="about"/>
+    <ui:define name="page_title">企业简介</ui:define>
+	<ui:define name="template_content">
+		<script type="text/javascript">
+			function about_intro(n){ 
+				if(n==0){
+					$('.tips').text('关于汇通');
+					}
+				if(n==1){
+					$('.tips').text('企业简介');
+					}
+				if(n==2){
+					$('.tips').text('合作机构');
+					}
+					$("#introduce_title ul li").addClass("idea_bg_1").removeClass("about_font_1").removeClass("pro_bg_1");
+					$("#introduce_title ul li").eq(n).removeClass("idea_bg_1").addClass("pro_bg_1").addClass("about_font_1");
+					$("#introduce_content>div").addClass("about_div_1");
+					$("#introduce_content>div").eq(n).removeClass("about_div_1"); 
+				}
+		</script>
+		<div class="pro_div_1 idea_div_2">您现在的位置：<a  href="/index.htm">首页</a> -- <l class="tips">企业简介</l></div>
+		<div class="pro_div_1">
+			<div id="introduce_content">
+				<div>
+					<p class="idea_p_1">深圳市汇通财富管理有限公司是中国财富管理行业的知名企业，为大众富裕人群和高净值人群提供全方位的理财规划与财富管理顾问服务，专注将国内外最优秀的股权类理财模式通过科学的资产配置带给千千万万的理财者。</p>
+					<p class="idea_p_1">深圳市汇通财富管理有限公司是汇通集团全资子公司。深圳市汇通财富管理有限公司以客户理财需求为基础，根据客户的风险偏好、财务状况、家庭结构等因素量身定制理财规划，帮助客户实现稳定、安全的财富增值。</p>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+	</ui:composition>
+</html>

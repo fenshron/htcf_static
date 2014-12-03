@@ -1,0 +1,177 @@
+<pretty-config xmlns="http://ocpsoft.com/prettyfaces/2.0.4"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://ocpsoft.com/prettyfaces/2.0.4
+		http://ocpsoft.com/xml/ns/prettyfaces/ocpsoft-pretty-faces-2.0.4.xsd">
+
+	<url-mapping id="index">
+		<pattern value="/index.htm"></pattern>
+		<view-id>/WEB-INF/site/index.xhtml</view-id>
+	</url-mapping>
+	
+	
+	<url-mapping id="enroll">
+		<pattern value="/enroll.htm"></pattern>
+		<view-id>/WEB-INF/site/enroll.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="inContent">
+		<pattern value="/inContent.htm"></pattern>
+		<view-id>/WEB-INF/site/index/inContent.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="yonru">
+		<pattern value="/yonru.htm"></pattern>
+		<view-id>/WEB-INF/site/index/yonru.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="yangping">
+		<pattern value="/yangping.htm"></pattern>
+		<view-id>/WEB-INF/site/index/yangping.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="chenping">
+		<pattern value="/chenping.htm"></pattern>
+		<view-id>/WEB-INF/site/index/chenping.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="pengcon">
+		<pattern value="/pengcon.htm"></pattern>
+		<view-id>/WEB-INF/site/index/pengcon.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="huangyin">
+		<pattern value="/huangyin.htm"></pattern>
+		<view-id>/WEB-INF/site/index/huangyin.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="huangping">
+		<pattern value="/huangping.htm"></pattern>
+		<view-id>/WEB-INF/site/index/huangping.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="contact">
+		<pattern value="/contact.htm"></pattern>
+		<view-id>/WEB-INF/site/contact/contact.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="adviser">
+		<pattern value="/adviser.htm"></pattern>
+		<view-id>/WEB-INF/site/adviser/adviser.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="products">
+		<pattern value="/products.htm"></pattern>
+		<view-id>/WEB-INF/site/products/products.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="business">
+		<pattern value="/business.htm"></pattern>
+		<view-id>/WEB-INF/site/products/business.xhtml</view-id>
+	</url-mapping>
+	
+	
+	<url-mapping id="idea">
+		<pattern value="/idea.htm"></pattern>
+		<view-id>/WEB-INF/site/idea/idea.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="about">
+		<pattern value="/about.htm"></pattern>
+		<view-id>/WEB-INF/site/about/about.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="userlist_biding">
+		<pattern value="/userlist_biding.htm"></pattern>
+		<view-id>/WEB-INF/site/userlist_biding.xhtml</view-id>
+	</url-mapping>
+	
+	
+	<url-mapping id="userlist">
+		<pattern value="/userlist.htm"></pattern>
+		<view-id>/WEB-INF/site/userlist.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="news">
+		<pattern value="/news.htm"></pattern>
+		<view-id>/WEB-INF/site/news/news.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="consultation">
+		<pattern value="/consultation.htm"></pattern>
+		<view-id>/WEB-INF/site/news/consultation.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="school">
+		<pattern value="/school.htm"></pattern>
+		<view-id>/WEB-INF/site/news/school.xhtml</view-id>
+	</url-mapping>
+	
+	
+	<url-mapping id="wealth">
+		<pattern value="/wealth.htm"></pattern>
+		<view-id>/WEB-INF/site/news/wealth.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="advantage">
+		<pattern value="/advantage.htm"></pattern>
+		<view-id>/WEB-INF/site/about/advantage.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="intro">
+		<pattern value="/intro.htm"></pattern>
+		<view-id>/WEB-INF/site/about/intro.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="partner">
+		<pattern value="/partner.htm"></pattern>
+		<view-id>/WEB-INF/site/about/partner.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="structure">
+		<pattern value="/structure.htm"></pattern>
+		<view-id>/WEB-INF/site/about/structure.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="video">
+		<pattern value="/video.htm"></pattern>
+		<view-id>/WEB-INF/site/about/video.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="tool_lc">
+		<pattern value="/tool_lc.htm"></pattern>
+		<view-id>/WEB-INF/site/tool/tool_lc.xhtml</view-id>
+	</url-mapping>
+	<url-mapping id="tool_dk">
+		<pattern value="/tool_dk.htm"></pattern>
+		<view-id>/WEB-INF/site/tool/tool_dk.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="error">
+		<pattern value="/error.htm"></pattern>
+		<view-id>/WEB-INF/site/error.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="inContent1">
+		<pattern value="/inContent1.htm"></pattern>
+		<view-id>/WEB-INF/site/content/inContent1.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="inContent2">
+		<pattern value="/inContent2.htm"></pattern>
+		<view-id>/WEB-INF/site/content/inContent2.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="inContent3">
+		<pattern value="/inContent3.htm"></pattern>
+		<view-id>/WEB-INF/site/content/inContent3.xhtml</view-id>
+	</url-mapping>
+	
+	<url-mapping id="inContent4">
+		<pattern value="/inContent4.htm"></pattern>
+		<view-id>/WEB-INF/site/content/inContent4.xhtml</view-id>
+	</url-mapping>
+	
+
+	
+	
+</pretty-config>

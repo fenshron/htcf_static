@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:tag="http://java.sun.com/jsf/composite/facetag">
+
+<ui:composition template="../tempalet/templaet_business.xhtml">
+    <ui:param name="menu_nav_key" value="adviser"/>
+    <ui:define name="page_title">财富预约</ui:define>
+	<ui:define name="template_content">
+	<script>
+	$(document).ready(function(){
+		$("#adviserform tr td:eq(2)").css("width","100px");
+		$("#advisersubmit").hover(function(){
+			$(this).css("background-color","#FFD42A");
+		},function(){
+			$(this).css("background-color","#F7622C")
+		}); 
+	});
+	function  sub(){
+		var name=$('input eq(0)');
+		if(confirm(name)){
+			return true;
+		}else{
+			return false;
+			}
+		}
+	</script>
+		<div class="pro_div_1" style="margin: -20px auto 0 auto; margin-bottom: 20px;">
+		   <div>您现在的位置: <a href="index.htm">首页</a> -- <a href="/htcf/mean.htm"></a>财富预约</div>
+			 <div style="margin-left: 100px; ">
+					<h:form prependId="false">
+						 <p class="tip">请留下你的联系方式和投资需求，我们的专业理财顾问会在一个工作日内与您联系。</p>
+							 <table id="adviserform">
+							 	<tr><td>姓名</td><td><h:inputText id="姓名"  value="#{caffSendEmailBean.caffsendemail.caffSendEmailUsername}" required="true" /></td><td> </td><td>所在城市</td><td><h:inputText id="city" value="#{caffSendEmailBean.caffsendemail.caffSendEmailCity}" /></td></tr>
+							 	<tr><td colspan="2"><h:message  style="color:red;" for="姓名" /></td><td>&#160;</td><td>&#160;</td>  </tr>
+							 	<tr><td>工作单位</td><td><h:inputText id="工作单位" value="#{caffSendEmailBean.caffsendemail.caffSendEmailWorkAdress}" /></td><td> </td><td>职务</td><td><h:inputText id="position" value="#{caffSendEmailBean.caffsendemail.caffSendEmailJob}" /></td></tr>
+							 	<tr><td></td><td><h:message  style="color:red;" for="工作单位" />&#160; </td><td>&#160;&#160;</td><td> </td><td> </td></tr>
+							 	<tr><td>电子邮箱</td><td>
+							 	<h:inputText id="邮箱" required="true"  value="#{caffSendEmailBean.caffsendemail.caffSendEmailEmail}">
+							 	<f:validator validatorId="EmailValidator" />
+								<f:ajax event="keyup" render="email_err"/>
+							 	</h:inputText>
+							 	</td><td> </td><td>联系电话</td><td>
+							 	<h:inputText id="电话" required="true" value="#{caffSendEmailBean.caffsendemail.caffSendEmailPhone}">
+							 	<f:validator validatorId="PhoneValidator" />
+								<f:ajax event="keyup" render="phone_err"/>
+							 	</h:inputText>
+							 	</td></tr>
+							 	<tr style="text-algin:left;"><td colspan="2"> <h:message for="邮箱" id="email_err" style="color:red; height:20px;"/>&#160; </td><td colspan="3" style="text-align: right;"> <h:message for="电话" id="phone_err" style="color:red"/> &#160; </td></tr>
+							 	<tr><td>预投入金额(万元)</td><td>
+							 	<h:inputText id="金额" required="true" value="#{caffSendEmailBean.caffsendemail.caffSendEmailMoney}">
+							 	<f:validator validatorId="MoneyValidator" />
+								<f:ajax event="keyup" render="money_err"/>
+							 	</h:inputText>
+							 	</td><td> </td><td>了解汇通渠道</td><td>
+							 		<h:selectOneMenu id="how_know" style="width:166px;" value="#{caffSendEmailBean.caffsendemail.caffSendEmailInformation}">
+							 			<f:selectItem itemValue="" itemLabel="--请选择--" />
+			       					    <f:selectItem itemValue="理财经理" itemLabel="理财经理" />
+			       					    <f:selectItem itemValue="网络" itemLabel="网络" />
+			       					    <f:selectItem itemValue="报纸" itemLabel="报纸" />
+			       					    <f:selectItem itemValue="亲戚朋友" itemLabel="亲戚朋友" />
+							 		</h:selectOneMenu>
+							 	
+							 	</td></tr>
+								 <tr><td></td><td><h:message for="金额" id="money_err" style="color:red"/>&#160; </td><td>&#160;&#160;</td><td> </td><td> </td></tr>
+							 </table>
+							 <div style="margin-left: 300px; margin-top:50px;">
+							 
+							 <h:commandButton id="advisersubmit" value="提交"   action="#{caffSendEmailBean.send}"   />
+							 <script>
+							 
+							 
+							 	$('#advisersubmit').click(function(){
+							 		var info;
+							 		info = '姓名: ' + $('#姓名').val() + '\n所在城市: ' + $('#city').val()
+							 				+ '\n工作单位: ' + $('#工作单位').val() + '\n职务: ' + $('#position').val()
+							 				+ '\n电子邮箱: ' + $('#邮箱').val() + '\n联系电话: ' + $('#电话').val()
+							 				+'\n预投入金额(万元): ' + $('#金额').val() + '\n了解汇通渠道: ' + $('#how_know').val();
+							 		return confirm(info);
+							 	})
+							 	
+							 </script>
+							 
+							 </div>
+					
+					</h:form>
+					<div>
+					<c:if test="#{caffSendEmailBean.caffsendemail.flag}">
+					<h:outputText value="******发送成功******" style="color:#FFAA00;" />
+					</c:if>
+					 
+					</div>
+					
+				 
+								
+					
+				</div>
+		 
+		</div>
+		
+		
+		
+	</ui:define>
+</ui:composition>
+</html>
+
+
+
+
+
+
